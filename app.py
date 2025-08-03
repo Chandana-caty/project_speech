@@ -20,7 +20,7 @@ if user_text:
         try:
             # Query the LLM
             response = client.chat.completions.create(
-                model="mixtral-8x7b-32768",
+                model="llama3-8b-8192",
                 messages=[{"role": "user", "content": user_text}]
             )
             bot_text = response.choices[0].message.content
